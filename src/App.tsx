@@ -1,57 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+
+import styles from './App.module.css';
+
+import OldSchool from "./features/old-school/OldSchool";
+import ReactToolkit from "./features/react-toolkit/ReactToolkit";
+import { Counter } from "./features/counter/Counter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <Router>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <Link to="/old-school">Old School</Link>
+          <Link to="/react-toolkit">React Toolkit</Link>
+        </div>
+
+        <div className={styles.main}>
+          <Switch>
+            <Route path="/old-school">
+              <OldSchool/>
+            </Route>
+            <Route path="/react-toolkit">
+              <ReactToolkit/>
+            </Route>
+            <Route path="/">
+              <Counter/>
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 
