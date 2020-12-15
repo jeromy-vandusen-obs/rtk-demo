@@ -1,5 +1,5 @@
 import { AppThunk } from "../../../../app/store";
-import { reduxToolkitSlice } from "../reducers/reduxToolkitReducer";
+import { reduxToolkitSlice } from "../slices/reduxToolkitSlice";
 
 import { createRestaurant, getRestaurants } from "../../../old-school/services/restaurantService";
 import { Restaurant } from "../../../old-school/services/types";
