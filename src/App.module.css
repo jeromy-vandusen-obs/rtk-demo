@@ -1,12 +1,15 @@
-.container {}
+.container {
+  margin: 0 auto;
+  width: 800px;
+}
 
 .header {
   height: 72px;
   border-bottom: 1px solid #CDCDCD;
   padding: 0 48px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-
 }
 
 .header > a:last-of-type {
