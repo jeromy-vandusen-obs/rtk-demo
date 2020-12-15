@@ -9,8 +9,7 @@ import {
 import styles from './App.module.css';
 
 import OldSchool from "./features/old-school/OldSchool";
-import ReactToolkit from "./features/react-toolkit/ReactToolkit";
-import { Counter } from "./features/counter/Counter";
+import ReduxToolkit from "./features/redux-toolkit/ReduxToolkit";
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
       <div className={styles.container}>
         <div className={styles.header}>
           <Link to="/old-school">Old School</Link>
-          <Link to="/react-toolkit">React Toolkit</Link>
+          <Link to="/redux-toolkit">Redux Toolkit</Link>
         </div>
 
         <div className={styles.main}>
@@ -26,11 +25,11 @@ function App() {
             <Route path="/old-school">
               <OldSchool/>
             </Route>
-            <Route path="/react-toolkit">
-              <ReactToolkit/>
+            <Route path="/redux-toolkit">
+              <ReduxToolkit/>
             </Route>
             <Route path="/">
-              <Counter/>
+              <h1>Hello World!</h1>
             </Route>
           </Switch>
         </div>

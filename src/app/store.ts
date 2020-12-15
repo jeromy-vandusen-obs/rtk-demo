@@ -1,10 +1,12 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { ThunkAction, Action, configureStore } from '@reduxjs/toolkit';
+import { oldSchoolReducer } from "../features/old-school/redux/reducers/oldSchoolReducer";
+import reduxToolkitReducer from "../features/redux-toolkit/redux/reducers/reduxToolkitReducer";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
-  },
+    oldSchool: oldSchoolReducer,
+    reduxToolkit: reduxToolkitReducer
+  }
 });
 
 export type RootState = ReturnType<typeof store.getState>;

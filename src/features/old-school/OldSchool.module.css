@@ -1,0 +1,50 @@
+.loading {
+  height: 100%;
+  width: 100%;
+  font-size: 48px;
+}
+
+.restaurants {
+  border: 1px solid #CDCDCD;
+}
+
+.restaurant {
+  padding: 0 24px;
+  height: 48px;
+  border-bottom: 1px solid #CDCDCD;
+  display: flex;
+  align-items: center;
+}
+
+.restaurant:last-of-type {
+  border-bottom: none;
+}
+
+.name {
+  width: 40%;
+}
+
+.form {
+  margin: 48px 24px;
+}
+
+.row {
+  display: flex;
+  margin: 12px 0;
+}
+
+.label {
+  width: 100px;
+}
+
+input {
+  padding: 3px 6px;
+  width: 288px;
+}
+
+button {
+  margin-left: 335px;
+  padding: 3px 12px;
+  background-color: #FFFFFF;
+  border: 2px solid #CDCDCD;
+}
