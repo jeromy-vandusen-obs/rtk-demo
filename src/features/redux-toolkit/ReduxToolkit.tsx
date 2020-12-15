@@ -1,8 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
-import { selectReduxToolkitRestaurants } from "./redux/selectors/reduxToolkitSelectors";
-import { loadAllRestaurants, updateRestaurantAddress, updateRestaurantName, createNewRestaurant } from "./redux/actions/reduxToolkitActions";
+import {
+  createNewRestaurant,
+  loadAllRestaurants,
+  selectReduxToolkitRestaurants,
+  updateRestaurantName,
+  updateRestaurantAddress
+} from "./redux/reduxToolkitSlice";
 
 import styles from './ReduxToolkit.module.css';
 
@@ -17,7 +22,7 @@ const ReduxToolkit = (): JSX.Element => {
 
   React.useEffect(() => {
     dispatch(loadAllRestaurants());
-  }, [dispatch, loadAllRestaurants]);
+  }, [dispatch]);
 
   return (
     <>

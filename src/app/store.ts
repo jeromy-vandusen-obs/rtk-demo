@@ -1,6 +1,6 @@
 import { ThunkAction, Action, configureStore } from '@reduxjs/toolkit';
 import { oldSchoolReducer } from "../features/old-school/redux/reducers/oldSchoolReducer";
-import reduxToolkitReducer from "../features/redux-toolkit/redux/reducers/reduxToolkitReducer";
+import reduxToolkitReducer from "../features/redux-toolkit/redux/reduxToolkitSlice";
 
 export const store = configureStore({
   reducer: {
